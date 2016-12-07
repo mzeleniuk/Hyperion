@@ -1,0 +1,4 @@
+project=hyperion
+architecture=container
+test=minitest
+template=erb
