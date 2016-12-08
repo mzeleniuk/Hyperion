@@ -20,6 +20,9 @@ end
 group :test do
   gem 'minitest'
   gem 'capybara'
+
+  # A code coverage analysis tool for Ruby
+  gem 'simplecov', '~> 0.12.0', require: false
 end
 
 group :production do
