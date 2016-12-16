@@ -7,3 +7,5 @@
 root to: 'home#index'
 
 get '/albums', to: 'albums#index'
+get '/albums/new', to: 'albums#new'
+post '/albums', to: 'albums#create'
