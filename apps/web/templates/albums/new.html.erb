@@ -13,7 +13,7 @@
 <% end %>
 
 <%=
-  form_for :album, '/albums' do
+  form_for :album, routes.albums_path do
     div class: 'input' do
       label :title
       text_field :title

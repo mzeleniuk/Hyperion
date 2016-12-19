@@ -16,7 +16,7 @@ module Web::Controllers::Albums
       if params.valid?
         @album = AlbumRepository.new.create(params[:album])
 
-        redirect_to '/albums'
+        redirect_to routes.albums_path
       else
         self.status = 422
       end

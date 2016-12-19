@@ -4,8 +4,6 @@
 # Example:
 # get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
 
-root to: 'home#index'
+resources :albums, only: [:index, :new, :create]
 
-get '/albums', to: 'albums#index'
-get '/albums/new', to: 'albums#new'
-post '/albums', to: 'albums#create'
+root to: 'home#index'
