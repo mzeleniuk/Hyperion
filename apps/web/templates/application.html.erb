@@ -12,11 +12,12 @@
 
     <%= favicon %>
 
-    <%= stylesheet 'bootstrap' %>
+    <%= stylesheet 'bootstrap', 'application' %>
     <%= javascript 'jquery', 'bootstrap' %>
   </head>
   <body>
-  <h1>Hyperion</h1>
+    <div><%= render partial: 'shared/navigation_bar' %></div>
+
     <%= yield %>
   </body>
 </html>
