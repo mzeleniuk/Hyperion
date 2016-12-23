@@ -7,6 +7,12 @@ gem 'hanami-model', '~> 0.7'
 
 gem 'pg'
 
+# Provides jQuery and the jQuery-ujs driver for Hanami application
+gem 'jquery-hanami', '~> 0.1.0'
+
+# Bootstrap wrapper for Hanami framework
+gem 'hanami-bootstrap', '~> 0.3.0'
+
 group :development do
   # Code reloading
   # See: http://hanamirb.org/guides/projects/code-reloading

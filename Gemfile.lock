@@ -57,6 +57,8 @@ GEM
       hanami-helpers (~> 0.5)
       hanami-utils (~> 0.9)
       tilt (~> 2.0, >= 2.0.2)
+    hanami-bootstrap (0.3.0)
+      hanami-assets (~> 0.2)
     hanami-controller (0.8.1)
       hanami-utils (~> 0.9)
       rack (~> 1.6, >= 1.6.2)
@@ -87,6 +89,8 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     inflecto (0.0.2)
+    jquery-hanami (0.1.0)
+      hanami-assets
     json (2.0.2)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
@@ -154,7 +158,9 @@ DEPENDENCIES
   capybara
   dotenv (~> 2.0)
   hanami (~> 0.9)
+  hanami-bootstrap (~> 0.3.0)
   hanami-model (~> 0.7)
+  jquery-hanami (~> 0.1.0)
   minitest
   pg
   rake
