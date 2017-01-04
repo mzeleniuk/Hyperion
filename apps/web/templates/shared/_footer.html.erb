@@ -1,0 +1,28 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="list-inline">
+          <li><%= link_to('Home', routes.root_path, title: 'Home') %></li>
+          <li class="footer-menu-divider">&sdot;</li>
+
+          <li><a href="#about">About</a></li>
+          <li class="footer-menu-divider">&sdot;</li>
+
+          <li><a href="#services">Services</a></li>
+          <li class="footer-menu-divider">&sdot;</li>
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <p class="copyright text-muted small">
+          Hyperion, 2016 - <%= Date.today.year %>
+
+          <span class="pull-right">
+            Powered by <a href="http://hanamirb.org/" target="_blank" title="Hanami website">Hanami</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
