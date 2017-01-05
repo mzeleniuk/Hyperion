@@ -1,15 +1,29 @@
-<h2>All albums</h2>
-
-<% if albums.any? %>
-  <div id="albums">
-    <% albums.each do |album| %>
-      <div class="album">
-        <h2><%= album.title %></h2>
-        <p><%= album.author %></p>
-        <p><%= album.year %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+      <div class="page-header">
+        <h2 class="text-center">All albums</h2>
       </div>
-    <% end %>
+
+      <% if albums.any? %>
+        <div id="albums">
+          <ul class="cards">
+            <% albums.each do |album| %>
+              <li>
+                <div class="album">
+                  <small><%= album.year %></small>
+                  <h2><%= album.title %></h2>
+                  <h4><%= album.author %></h4>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+
+          <div class="clearfix"></div>
+        </div>
+      <% else %>
+        <p class="alert alert-info">There are no albums yet.</p>
+      <% end %>
+    </div>
   </div>
-<% else %>
-  <p>There are no albums yet.</p>
-<% end %>
+</div>

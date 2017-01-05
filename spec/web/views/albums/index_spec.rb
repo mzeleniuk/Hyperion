@@ -13,7 +13,7 @@ describe Web::Views::Albums::Index do
 
   describe 'when there are no albums' do
     it 'shows a text message' do
-      rendered.must_include('<p>There are no albums yet.</p>')
+      rendered.must_include('<p class="alert alert-info">There are no albums yet.</p>')
     end
   end
 
@@ -29,7 +29,7 @@ describe Web::Views::Albums::Index do
     end
 
     it 'hides the text message' do
-      rendered.wont_include('<p>There are no albums yet.</p>')
+      rendered.wont_include('<p class="alert alert-info">There are no albums yet.</p>')
     end
   end
 end
