@@ -1,36 +1,67 @@
-<h2>Add album</h2>
+<div class="container-fluid" style="margin-top: 40px;">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+      <% unless params.valid? %>
+        <div class="alert alert-danger errors" role="alert">
+          <h4>There was a problem with your submission</h4>
 
-<% unless params.valid? %>
-  <div class="errors">
-    <h3>There was a problem with your submission</h3>
-
-    <ul>
-      <% params.error_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+            <% params.error_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-    </ul>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+          <%= image 'phone.png', class: 'centered img-responsive' %>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h2 class="panel-title text-center">Add album</h2>
+            </div>
+
+            <div class="panel-body">
+              <%=
+                form_for :album, routes.albums_path, class: 'form-horizontal' do
+                  div class: 'form-group' do
+                    label :title, class: 'col-sm-2 control-label'
+
+                    div class: 'col-sm-10' do
+                      text_field :title, class: 'form-control'
+                    end
+                  end
+
+                  div class: 'form-group' do
+                    label :author, class: 'col-sm-2 control-label'
+
+                    div class: 'col-sm-10' do
+                      text_field :author, class: 'form-control'
+                    end
+                  end
+
+                  div class: 'form-group' do
+                    label :year, class: 'col-sm-2 control-label'
+
+                    div class: 'col-sm-10' do
+                      number_field :year, min: 1, class: 'form-control'
+                    end
+                  end
+
+                  div class: 'form-group' do
+                    div class: 'col-sm-offset-2 col-sm-10' do
+                      submit 'Create Album', class: 'btn btn-warning'
+                    end
+                  end
+                end
+              %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%=
-  form_for :album, routes.albums_path do
-    div class: 'input' do
-      label :title
-      text_field :title
-    end
-
-    div class: 'input' do
-      label :author
-      text_field :author
-    end
-
-    div class: 'input' do
-      label :year
-      number_field :year
-    end
-
-    div class: 'controls' do
-      submit 'Create Album'
-    end
-  end
-%>
+</div>
