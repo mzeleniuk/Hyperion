@@ -5,7 +5,7 @@ module Web::Controllers::Albums
     expose :albums
 
     def call(params)
-      @albums = AlbumRepository.new.all
+      @albums = AlbumRepository.new.all.sort_by { |album| [-album.year, album.title] }
     end
   end
 end

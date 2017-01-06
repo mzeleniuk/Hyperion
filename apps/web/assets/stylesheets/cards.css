@@ -33,7 +33,7 @@ ul.cards li div a {
 }
 
 ul.cards li {
-  margin: 10px 40px 50px 0;
+  margin: 10px 40px 50px 40px;
   float: left;
 }
 
@@ -77,9 +77,17 @@ ul.cards li:nth-child(3n) div {
 }
 
 ul.cards li:nth-child(5n) div {
-  -o-transform: rotate(5deg);
-  -webkit-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
+  -o-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  position: relative;
+  top: -10px;
+}
+
+ul.cards li:nth-child(6n) div {
+  -o-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
   position: relative;
   top: -10px;
 }
