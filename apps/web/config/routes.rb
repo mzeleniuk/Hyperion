@@ -6,4 +6,6 @@
 
 resources :albums, only: [:index, :new, :create]
 
+get '/about', to: 'pages#about', as: :about
+
 root to: 'home#index'
