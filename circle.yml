@@ -1,0 +1,12 @@
+# Machine configuration
+
+machine:
+  ruby:
+    version:
+      2.3.1
+
+# Project-specific dependencies
+
+dependencies:
+  pre:
+    - gem install bundler
