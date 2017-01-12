@@ -15,13 +15,5 @@ dependencies:
 
 database:
   override:
-    - bundle exec hanami db prepare --trace
-    - HANAMI_ENV=test bundle exec hanami db prepare --trace
-
-# Running tests
-
-test:
-  post:
-    - bundle exec rake test:
-      environment:
-        HANAMI_ENV: test
+    - bundle exec hanami db prepare
+    - HANAMI_ENV=test bundle exec hanami db prepare
