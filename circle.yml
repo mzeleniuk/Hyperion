@@ -10,3 +10,18 @@ machine:
 dependencies:
   pre:
     - gem install bundler
+
+# Database setup
+
+database:
+  override:
+    - bundle exec hanami db prepare --trace
+    - HANAMI_ENV=test bundle exec hanami db prepare --trace
+
+# Running tests
+
+test:
+  override:
+    - bundle exec rake test:
+      environment:
+        HANAMI_ENV: test
