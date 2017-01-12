@@ -1,5 +1,7 @@
 # Hyperion
 
+[![CircleCI](https://circleci.com/gh/mzelenyuk/Hyperion.svg?style=svg&circle-token=58bd66ec02f0524e60393a7d3afe330bd556c9b4)](https://circleci.com/gh/mzelenyuk/Hyperion)
+
 Hyperion is a simple web application powered by Hanami framework.
 
 [![Hanami](http://hanamirb.org/images/logo.png)](http://hanamirb.org/)
