@@ -21,7 +21,7 @@ database:
 # Running tests
 
 test:
-  override:
+  post:
     - bundle exec rake test:
       environment:
         HANAMI_ENV: test
